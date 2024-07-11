@@ -13,22 +13,18 @@ h1{
   flex-wrap: wrap;
   border: 1px solid red;
   justify-content: center;
+  background-image: url(./assets/cool-nba-logo-wallpaper-preview.jpg);
   
 }
 
-.images{
+.images, .statistics{
   border: 2px solid blue;
-  width: 250px;
-  height: 250px;
+  width: 260px;
+  height: 350px;
   margin: 10px;
 }
 
-.statistics{
-  border: 2px solid blue;
-  width: 250px;
-  height: 250px;
-  margin: 10px;
-}
+
 
 /* .biggest-div{
   border: 3px solid blue;

@@ -1,40 +1,52 @@
-import React, { useState } from 'react';
 import PlayerCard from './PlayerCard';
-import { data } from '../helper/data'; // data.js dosyasından veriyi import ediyoruz
+import  { data }  from '../helper/data'; 
+import { useState } from 'react';
 
 const CardContainer = () => {
-  const [searchTerm, setSearchTerm] = useState(''); // Arama terimini saklayacak state
 
-  // Arama kutusundaki değeri güncellemek için kullanılacak fonksiyon
-  const handleSearchChange = (event) => {
-    setSearchTerm(event.target.value);
-  };
+ const [search, setSearch] = useState("")
 
-  // Filtrelenmiş oyuncu listesini oluşturan fonksiyon
-  const filteredPlayers = data.filter((player) =>
-    player.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
+ const handleSearchChange = (e) => {
+  // console.log(e.target.value)
+  setSearch(e.target.value);
+};
+const filteredPlayers = data.filter((e) =>
+  e.name.toLowerCase().includes(search.toLowerCase()))
+  
   return (
     <div>
-      {/* Arama kutusu */}
-      <div className="search-div">
-        <input
-          type="text"
-          placeholder="Search"
-          className="search-input"
-          value={searchTerm}
-          onChange={handleSearchChange} // Arama kutusunda her değişiklikte tetiklenecek fonksiyon
+
+    <div className="search-box">
+      <input
+       type="text"
+       placeholder='Search'
+       className='search-input'
+       value={search}
+       onChange={handleSearchChange}
         />
-      </div>
-      
-      {/* Kartların listesi */}
-      <div className="card-container">
+        <div></div>
+    </div>
+    
+
+
+
+    
+    <div className="card-container">
         {filteredPlayers.map((player, index) => (
           <PlayerCard key={index} {...player} />
         ))}
       </div>
-    </div>
+      
+      
+      
+      
+      
+      
+      </div>
+
+    
+   
+    
   );
 };
 

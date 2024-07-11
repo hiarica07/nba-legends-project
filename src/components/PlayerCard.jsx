@@ -11,10 +11,9 @@ const PlayerCard = ({ name, img, statistics }) => {
   return (
     <div className="player-card" onClick={toggleStatistics}>
       {!showStatistics ? (
-        <>
+        <div>
           <img className="images" src={img} alt={name} />
-          
-        </>
+        </div>
       ) : (
         <div className="statistics">
           <ul>
