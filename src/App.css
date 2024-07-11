@@ -1,39 +1,35 @@
-.player-card {
-  width: 250px;
-  height: 250px;
-  margin: 10px; /* Aralıkları ayarlayabilirsiniz */
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.logo{
+  text-align: center;
   align-items: center;
 }
 
-.player-card:hover {
-  transform: scale(1.05); /* Hover efekti */
-}
-
-.player-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-
-.player-card h3 {
+h1{
   text-align: center;
-  margin-top: 10px;
+  align-items: center;
 }
 
-.statistics {
-  display: none;
-  margin-top: 10px;
+.card-container{
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid red;
+  justify-content: center;
+  
 }
 
-.player-card.show-statistics .statistics {
-  display: block;
+.images{
+  border: 2px solid blue;
+  width: 250px;
+  height: 250px;
+  margin: 10px;
 }
+
+.statistics{
+  border: 2px solid blue;
+  width: 250px;
+  height: 250px;
+  margin: 10px;
+}
+
+/* .biggest-div{
+  border: 3px solid blue;
+} */

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-// import '../App.css';
+import React, { useState } from "react";
+import '../App.css';
 
 const PlayerCard = ({ name, img, statistics }) => {
   const [showStatistics, setShowStatistics] = useState(false);
@@ -12,7 +12,7 @@ const PlayerCard = ({ name, img, statistics }) => {
     <div className="player-card" onClick={toggleStatistics}>
       {!showStatistics ? (
         <>
-          <img src={img} alt={name} />
+          <img className="images" src={img} alt={name} />
           <h3>{name}</h3>
         </>
       ) : (
@@ -21,6 +21,7 @@ const PlayerCard = ({ name, img, statistics }) => {
             {statistics.map((stat, index) => (
               <li key={index}>{stat}</li>
             ))}
+            <h3>{name}</h3>
           </ul>
         </div>
       )}
