@@ -13,7 +13,7 @@ const PlayerCard = ({ name, img, statistics }) => {
       {!showStatistics ? (
         <>
           <img className="images" src={img} alt={name} />
-          <h3>{name}</h3>
+          
         </>
       ) : (
         <div className="statistics">
@@ -21,10 +21,11 @@ const PlayerCard = ({ name, img, statistics }) => {
             {statistics.map((stat, index) => (
               <li key={index}>{stat}</li>
             ))}
-            <h3>{name}</h3>
+            
           </ul>
         </div>
       )}
+      <h3>{name}</h3>
     </div>
   );
 };
